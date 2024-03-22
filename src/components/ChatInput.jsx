@@ -1,6 +1,16 @@
 import React, { useState, useRef } from 'react';
 import { useList } from '../context/Chatcontext'
-import { classicNameResolver } from 'typescript';
+import SendIcon from '@mui/icons-material/Send';
+import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import AttachFileIcon from '@mui/icons-material/AttachFile';
+import Box from '@mui/material/Box';
+import ImageIcon from '@mui/icons-material/Image';
+import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
+import HeadsetIcon from '@mui/icons-material/Headset';
+
 
 export const ChatInput = () => {
   const [inputText, setInputText] = useState('');
@@ -63,7 +73,7 @@ export const ChatInput = () => {
       console.log(data.response);
       setList((prevlist) => ([...prevlist, { type: "bot", message: data.message }]))
       setSelectedFile(null)
-      
+
 
     }
     catch (err) {
@@ -109,13 +119,55 @@ export const ChatInput = () => {
     fileInputRef.current.click();
   };
 
+  const [anchorEl, setAnchorEl] = useState(null);
 
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
 
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} className='bg-slate-800 w-[90%] max-w-[1000px] mx-auto rounded-xl  text-white h-[60px] flex'>
+    <div className='flex space-x-0 justify-center mr-4 md:flex md:w-[80%] sticky bottom-0'>
+
+      <div className='mt-2'>
+      <Box position="relative">
+      <Button
+        aria-controls="attach-file-menu"
+        aria-haspopup="true"
+        onClick={handleClick}
+        sx={{ fontSize: '1.5rem' }}
+      >
+        <AttachFileIcon sx={{ fontSize: '2rem' }} />
+      </Button>
+      <Menu
+        id="attach-file-menu"
+        anchorEl={anchorEl}
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        transformOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        getContentAnchorEl={null}
+      
+        sx={{ position: 'absolute', top: '-40px' }}
+      >
+        <MenuItem onClick={handleClose} sx={{ color: '#f321c6' }}>
+          <ImageIcon className='mr-1' />Image
+        </MenuItem>
+        <MenuItem onClick={handleClose} sx={{ color: '#882bf1' }}>
+          <InsertDriveFileIcon className='mr-1' />File
+        </MenuItem>
+        <MenuItem onClick={handleClose} sx={{ color: '#f3700b' }}>
+          <HeadsetIcon className='mr-1' />Audio
+        </MenuItem>
+        </Menu>
+        </Box>
+      </div>
+
+      <form onSubmit={handleSubmit} className='bg-slate-800 w-[90%] max-w-[1000px] mx-auto rounded-2xl  text-white h-[60px] flex'>
 
 
 
@@ -124,11 +176,11 @@ export const ChatInput = () => {
           placeholder="Type your message..."
           value={inputText}
           onChange={handleInputChange}
-          className='w-[85%] bg-transparent pl-8 h-full rounded-xl mr-2'
+          className='w-[90%] bg-transparent pl-8 h-full rounded-xl mr-5'
         />
-        <button type="submit">Send</button>
+        <button type="submit" className='mr-3'><SendIcon/></button>
 
-        <button onClick={handleButtonClick}>Choose</button>
+        <button onClick={handleButtonClick} className='mr-3' ><AddPhotoAlternateIcon/></button>
 
 
 
