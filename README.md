@@ -1,30 +1,47 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Full-Stack Chat App with LLM Support
 
-Currently, two official plugins are available:
+Welcome to our Full-Stack Chat App! This application is designed to provide a seamless communication experience with support for Large Language Models (LLMs) and several other features.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Screenshots
 
-## Expanding the ESLint configuration
+1. ![Screenshot 1](https://github.com/KarthikeyaKollu/dashboard-react/assets/108949445/47c2af00-4e24-49ac-a277-5d19d70089a4)
+   Description of the screenshot.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. ![Screenshot 2](https://github.com/KarthikeyaKollu/dashboard-react/assets/108949445/ee10d8f8-c342-4b85-8753-4b3c61c6ef8a)
+   Description of the screenshot.
 
-- Configure the top-level `parserOptions` property like this:
+3. ![Screenshot 3](https://github.com/KarthikeyaKollu/dashboard-react/assets/108949445/791a428b-5ec2-469d-8d16-d197927c96ff)
+   Description of the screenshot.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+4. ![Screenshot 4](https://github.com/KarthikeyaKollu/dashboard-react/assets/108949445/425dd72a-6002-42c8-9490-51735e391771)
+   Description of the screenshot.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+5. ![Screenshot 5](https://github.com/KarthikeyaKollu/dashboard-react/assets/108949445/0a490d79-4569-424b-b44d-a3cfad0e46ad)
+   Description of the screenshot.
+
+6. ![Screenshot 6](https://github.com/KarthikeyaKollu/dashboard-react/assets/108949445/07dea02f-8b52-4ac8-806d-c072fbc769d2)
+   Description of the screenshot.
+
+## Features
+
+- Real-time chat functionality
+- Support for Large Language Models (LLMs)
+- User authentication and authorization
+- Multi-platform compatibility
+- Customizable chat rooms
+- File and media sharing capabilities
+- Emoji and sticker support
+- Advanced search functionality
+- Message encryption for enhanced security
+
+
+
+## Installation
+
+To run this application locally, follow these steps:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/KarthikeyaKollu/dashboard-react.git
