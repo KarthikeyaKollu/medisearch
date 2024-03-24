@@ -29,11 +29,9 @@ Welcome to our Full-Stack Chat App! This application is designed to provide a se
 - Support for Large Language Models (LLMs)
 - User authentication and authorization
 - Multi-platform compatibility
-- Customizable chat rooms
-- File and media sharing capabilities
-- Emoji and sticker support
+- File and media capabilities
 - Advanced search functionality
-- Message encryption for enhanced security
+
 
 
 
